@@ -1283,6 +1283,26 @@ case "$DEVICE" in
             -e 's block/bootdevice/by-name/oem mmcblk0p30 ' \
             "$@"
         ;;
+
+      "evk_8mm")
+        sed -i \
+            -e 's block/bootdevice/by-name/boot_a mmcblk2p3 ' \
+            -e 's block/bootdevice/by-name/boot_b mmcblk2p4 ' \
+            -e 's block/bootdevice/by-name/dtbo_a mmcblk2p1 ' \
+            -e 's block/bootdevice/by-name/dtbo_b mmcblk2p2 ' \
+            -e 's block/bootdevice/by-name/fbmisc mmcblk2p13 ' \
+            -e 's block/bootdevice/by-name/metadata mmcblk2p8 ' \
+            -e 's block/bootdevice/by-name/misc mmcblk2p7 ' \
+            -e 's block/bootdevice/by-name/presistdata mmcblk2p9 ' \
+            -e 's block/bootdevice/by-name/system_a mmcblk2p5 ' \
+            -e 's block/bootdevice/by-name/system_b mmcblk2p6 ' \
+            -e 's block/bootdevice/by-name/userdata mmcblk2p12 ' \
+            -e 's block/bootdevice/by-name/vbmeta_a mmcblk2p14 ' \
+            -e 's block/bootdevice/by-name/vbmeta_b mmcblk2p15 ' \
+            -e 's block/bootdevice/by-name/vendor_a mmcblk2p10 ' \
+            -e 's block/bootdevice/by-name/vendor_b mmcblk2p11 ' \
+            "$@"
+        ;;
     *)
         cat <<EOF
 
